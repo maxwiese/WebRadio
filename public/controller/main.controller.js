@@ -7,7 +7,4 @@ myApp.controller('SystemController', ['$scope', '$http', '$location', '$routePar
       console.log('run Radio');
     };
   };
-
-
-
 }]);
