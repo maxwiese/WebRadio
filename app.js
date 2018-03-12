@@ -26,19 +26,33 @@ app.get('/', function(req, res) {
 //custome routes
 app.get('/run/:id', (req, res) => {
   var id = req.params.id;
-      console.log(stations[id].url)
-  /*
-  exec('mplayer ' + id, (error, data) => {
-    if (error){
-      res.send(error);
-    };
-    res.json(data);
-  });
-  */
+  var url = stations[id].url;
+  console.log(url)
+
+  if (url.indexOf('m3u') != -1) {
+    exec('mplayer -slave -input file=/home/pi/mplayer/control -playlist --prefer-ipv4 ' + url, (error, data) => {
+      if (error) {
+        res.send(error);
+      };
+      res.json(data);
+    });
+  } else {
+    exec('mplayer -slave -input file=/home/pi/mplayer/control' + url, (error, data) => {
+      if (error) {
+        res.send(error);
+      };
+      res.json(data);
+    });
+  };
 });
 
 app.get('/stations', (req, res) => {
   res.json(stations)
+});
+
+apt.get('/stop', (req, res) => {
+  exec('echo \"quit\" > /home/pi/mplayer/control');
+  res.send("stoped");
 });
 
 //listen for request

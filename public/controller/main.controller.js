@@ -17,7 +17,7 @@ myApp.controller('main', ['$scope', '$http', '$location', '$routeParams', functi
         $scope.radio_url = list[id].url;
         $scope.radio_image = list[id].image;
 
-        $http.get('/run/' + list[id].id)
+        $http.get('/run/' + list[id].id)]
           .then((response) => {
             console.log('play ' + id);
           });
@@ -33,12 +33,12 @@ myApp.controller('main', ['$scope', '$http', '$location', '$routeParams', functi
         };
 
         $scope.play = function() {
-          $http.get('/run/' + list[id].id)
+          $http.get('/run/' + list[id].id)}
             .then((response) => {
               console.log('play ' + id);
             });
         };
-        
+
       });
   };
 
