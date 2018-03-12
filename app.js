@@ -30,14 +30,14 @@ app.get('/run/:id', (req, res) => {
   console.log(url)
 
   if (url.indexOf('m3u') != -1) {
-    exec('mplayer -slave -input file=/home/pi/mplayer/control -playlist --prefer-ipv4 ' + url, (error, data) => {
+    exec('mplayer -playlist -prefer-ipv4 ' + url, (error, data) => {
       if (error) {
         res.send(error);
       };
       res.json(data);
     });
   } else {
-    exec('mplayer -slave -input file=/home/pi/mplayer/control' + url, (error, data) => {
+    exec('mplayer ' + url, (error, data) => {
       if (error) {
         res.send(error);
       };
@@ -50,9 +50,8 @@ app.get('/stations', (req, res) => {
   res.json(stations)
 });
 
-apt.get('/stop', (req, res) => {
-  exec('echo \"quit\" > /home/pi/mplayer/control');
-  res.send("stoped");
+app.get('/stop', (req, res) => {
+
 });
 
 //listen for request
