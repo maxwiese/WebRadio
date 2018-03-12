@@ -51,7 +51,7 @@ app.get('/stations', (req, res) => {
 });
 
 app.get('/stop', (req, res) => {
-
+  console.log("function not supportet yet");
 });
 
 //listen for request
