@@ -1,3 +1,9 @@
-<div >
-  <button ng-click="runRadio"> Turn Radio on</button>
+<div ng-init="stations()">
+  <table class="table table-hover">
+    <tbody>
+      <tr ng-repeat="stations in all">
+        <th> <a href="/#/radio/{{stations.id}}"> {{stations.station}}  </a> </th>
+      </tr>
+    </tbody>
+  </table>
 </div>

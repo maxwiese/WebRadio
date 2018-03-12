@@ -1,0 +1,24 @@
+<div class="container" ng-init="runRadio()">
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="container text-center">
+        <br>
+        <br>
+        <button class="btn" ng-click="back()">Zurück</button> <br>
+        <br>
+        <button class="btn" ng-click="stop()">Stop  </button> <br>
+        <br>
+        <button class="btn" ng-click="play()">Play  </button> <br>
+      </div>
+    </div>
+    <div class="col-sm-8">
+
+      <div class="container text-center">
+        <h1>Momentan läuft ...</h1>
+        <img src="{{radio_image}}">
+        <h3>{{radio_station}}</h3>
+      </div>
+
+    </div>
+  </div>
+</div>

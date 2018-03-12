@@ -1,0 +1,35 @@
+{
+	"antennebayern": {
+		"id": "antennebayern",
+		"station": "Antenne Bayern",
+		"url": "http://www.antenne.de/webradio/antenne.m3u",
+		"url2": "http://www.antenne.de/webradio/antenne.aac.pls",
+		"image": "http://liveradio.de/media/cache/station_detail/938f52c2-12f3-4f32-98e3-75c906a93648.jpg"
+	},
+	"rockantenne": {
+		"id":"rockantenne",
+		"station": "Rock Antenne",
+		"url": "http://www.rockantenne.de/webradio/rockantenne.m3u",
+		"url2": "http://www.rockantenne.de/webradio/rockantenne.aac.pls",
+		"image":"http://liveradio.de/media/cache/station_detail/b4724453-5857-4208-8cf4-a494106de360.jpg"
+	},
+  "radiofresh": {
+		"id": "radiofresh",
+    "station": "Radio Fresh",
+		"url": "http://www.antenne.de/webradio/channels/fresh.m3u",
+    "url2":"http://www.antenne.de/webradio/channels/fresh.aac.pls",
+		"image": "http://liveradio.de/media/cache/station_detail/5cdb7f06-87a0-4007-bb7d-31c477ab85c6.jpg"
+  },
+  "radio7": {
+		"id": "radio7",
+    "station": "Radio7",
+    "url": "http://stream.radio7.de/stream7/livestream.mp3",
+		"image": "http://liveradio.de/media/cache/station_detail/1e853d15-cc4e-4683-8662-afde90448c2d.jpg"
+  },
+  "bayern3": {
+		"id": "bayern3",
+    "station": "Bayern3",
+    "url": "http://br-br3-live.cast.addradio.de/br/br3/live/mp3/128/stream.mp3",
+		"image": "http://liveradio.de/media/cache/station_detail/955bec7f-7af3-4b2f-8789-328b38ec5ba5.jpg"
+  }
+}
